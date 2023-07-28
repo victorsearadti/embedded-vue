@@ -1,0 +1,12 @@
+{
+  "name": "embedded-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "pnpm -r --parallel --filter=./packages/** run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
