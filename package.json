@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "demo": "pnpm -r --parallel --filter=./packages/** run start"
+    "start": "pnpm -r --parallel --filter=./packages/** run serve"
   },
   "keywords": [],
   "author": "",

@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build:app": "vue-tsc && vite build",
+    "build:widget": "vue-tsc && vite build --config vite.config.widget.ts",
+    "build": "pnpm build:app && pnpm build:widget",
     "preview": "vite preview",
-    "start": "pnpm build && pnpm preview"
+    "serve": "pnpm build && pnpm preview"
   },
   "dependencies": {
     "vue": "^3.3.4",
