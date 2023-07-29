@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 import AppVue from "./App.vue";
-import { router } from "./router";
+import { plugins } from "./plugins";
 import "./style.css";
 
 const app = createApp(AppVue);
-app.use(router);
+plugins.forEach(app.use);
 app.mount("#app");

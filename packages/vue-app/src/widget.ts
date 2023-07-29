@@ -1,8 +1,8 @@
 import WidgetImpl from "./Widget.vue";
 import { defineWidget } from "./defineWidget";
-import { router } from "./router";
+import { plugins } from "./plugins";
 
-const Widget = defineWidget(WidgetImpl, { plugins: [router] });
+const Widget = defineWidget(WidgetImpl, { plugins });
 
 export { Widget };
 export function register() {
