@@ -1,4 +1,5 @@
-:host, :root {
+:host,
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  background-color: #242424;
 }
 
 a {
@@ -59,11 +61,21 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   background-color: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  max-height: 100%;
+}
+
+main {
+  padding: 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 @media (prefers-color-scheme: light) {
@@ -77,4 +89,34 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+nav {
+  padding: 0.5rem 0rem;
+  background-color: #353535;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav div {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+nav div a {
+  display: flex;
+  align-items: center;
+}
+
+nav div a:nth-child(odd)::after {
+  content: "";
+  height: 80%;
+  width: 1px;
+  border-left: 1px solid #5d5d5d;
+  display: flex;
+  transform: rotate(15deg);
+  margin-left: 1.5rem;
 }

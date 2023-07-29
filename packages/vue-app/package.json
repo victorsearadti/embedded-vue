@@ -10,7 +10,8 @@
     "start": "pnpm build && pnpm preview"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/node": "^20.4.5",
