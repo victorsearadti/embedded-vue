@@ -14,8 +14,10 @@ main {
 
 .remote-container {
   padding: 1rem;
+}
+
+.embedded {
   border: 4px solid #db64ff;
-  padding: 1rem;
 }
 
 h1 span,
