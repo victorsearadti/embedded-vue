@@ -2,8 +2,16 @@
 import { mdiHomeCity, mdiInformation } from "@mdi/js";
 </script>
 <template>
-  <v-layout class="h-100 w-100 position-relative" style="min-height: 400px">
-    <v-navigation-drawer :rail="true" permanent :absolute="true">
+  <v-layout
+    class="h-100 w-100 position-relative bg-vite-black"
+    style="min-height: 400px"
+  >
+    <v-navigation-drawer
+      :rail="true"
+      permanent
+      :absolute="true"
+      class="bg-vite-black"
+    >
       <v-list-item title="Embedded Vue" nav>
         <template v-slot:prepend>
           <v-avatar color="secondary"> ⚡️ </v-avatar>

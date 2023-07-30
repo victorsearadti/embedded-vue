@@ -7,6 +7,7 @@ const count = ref(0);
     <div class="d-flex flex-column gap-sm">
       <v-btn
         :elevation="0"
+        :ripple="false"
         width="max-content"
         color="primary"
         type="button"

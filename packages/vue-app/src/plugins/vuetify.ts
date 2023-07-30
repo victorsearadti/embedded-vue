@@ -10,6 +10,7 @@ const vuetify = createVuetify({
         colors: {
           primary: "#76FF03",
           secondary: "#FF3D00",
+          "vite-black": "#242424",
         },
       },
     },
