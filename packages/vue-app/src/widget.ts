@@ -1,10 +1,10 @@
-import WidgetImpl from "./Widget.vue";
+import App from "./App.vue";
 import { defineWidget } from "./defineWidget";
 import { plugins } from "./plugins";
 
-const Widget = defineWidget(WidgetImpl, { plugins });
+const AppWidget = defineWidget(App, { plugins });
 
-export { Widget };
+export { AppWidget };
 export function register() {
-  customElements.define("embedded-widget", Widget);
+  customElements.define("embedded-widget", AppWidget);
 }
