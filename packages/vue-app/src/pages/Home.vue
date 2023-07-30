@@ -10,7 +10,7 @@ import HelloWorld from "../components/HelloWorld.vue";
       <a href="https://vuejs.org/" target="_blank">
         <img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
-      <a href="" target="_blank">
+      <a href="https://vuetifyjs.com" target="_blank">
         <img
           src="../assets/vuetify.svg"
           class="logo vuetify"
@@ -21,7 +21,7 @@ import HelloWorld from "../components/HelloWorld.vue";
     <HelloWorld msg="Vite + Vue + Vuetify" />
   </div>
 </template>
-<style>
+<style scoped>
 .logo {
   height: 8rem;
   padding: 1.5em 0;
