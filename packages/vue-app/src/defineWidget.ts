@@ -1,11 +1,5 @@
-import {
-  Component,
-  Plugin,
-  createApp,
-  defineCustomElement,
-  getCurrentInstance,
-  h,
-} from "vue";
+import { Component, Plugin, createApp, getCurrentInstance, h } from "vue";
+import { defineCustomElement } from "./workaround/defineCustomElements";
 
 type Args = {
   plugins: Plugin<[]>[];
@@ -17,23 +11,26 @@ export const defineWidget = (
   component: ComponentWithStyles,
   args: Args = { plugins: [] }
 ) =>
-  defineCustomElement({
-    styles: component.styles,
-    render: () => h(component),
-    setup() {
-      const app = createApp({});
+  defineCustomElement(
+    {
+      styles: component.styles,
+      render: () => h(component),
+      setup() {
+        const app = createApp({});
 
-      args.plugins.forEach(app.use);
+        args.plugins.forEach(app.use);
 
-      const inst = getCurrentInstance();
+        const inst = getCurrentInstance();
 
-      if (!inst) {
-        console.error("No Vue instance found :(");
-        return;
-      }
+        if (!inst) {
+          console.error("No Vue instance found :(");
+          return;
+        }
 
-      Object.assign(inst.appContext, app._context);
-      //@ts-ignore
-      Object.assign(inst.provides, app._context.provides);
+        Object.assign(inst.appContext, app._context);
+        //@ts-ignore
+        Object.assign(inst.provides, app._context.provides);
+      },
     },
-  });
+    { shadowRoot: false }
+  );
