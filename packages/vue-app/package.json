@@ -12,7 +12,10 @@
     "serve": "pnpm build && pnpm preview"
   },
   "dependencies": {
+    "@tanstack/vue-query": "5.0.0-beta.6",
     "@vue/shared": "^3.3.4",
+    "@vueuse/core": "^10.3.0",
+    "axios": "^1.4.0",
     "html-parsed-element": "^0.4.1",
     "vue": "^3.3.4",
     "vue-router": "4",
