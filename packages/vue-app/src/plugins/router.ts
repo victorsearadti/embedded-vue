@@ -1,15 +1,33 @@
+import { mdiHome, mdiWeatherPartlyCloudy } from "@mdi/js";
+import { Component } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
-import About from "../pages/About.vue";
 import Home from "../pages/Home.vue";
+import Weather from "../pages/Weather.vue";
 
-const routes = [
-  { path: "/", component: Home },
-  { path: "/about", component: About },
+type AppRoutes = {
+  path: string;
+  component: Component;
+  title: string;
+  icon: string;
+};
+
+const routesConfig: AppRoutes[] = [
+  { path: "/", component: Home, icon: mdiHome, title: "Home" },
+  {
+    path: "/weather",
+    component: Weather,
+    icon: mdiWeatherPartlyCloudy,
+    title: "Weather",
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes: routesConfig.map((item) => ({
+    path: item.path,
+    component: item.component,
+  })),
 });
 
-export { router };
+export { router, routesConfig };
+export type { AppRoutes };

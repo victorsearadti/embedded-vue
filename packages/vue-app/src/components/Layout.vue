@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { mdiHomeCity, mdiInformation } from "@mdi/js";
+import type { AppRoutes } from "../plugins/router";
+
+type Props = {
+  appRoutes: AppRoutes[];
+};
+
+defineProps<Props>();
 </script>
 <template>
   <v-layout
@@ -14,8 +20,13 @@ import { mdiHomeCity, mdiInformation } from "@mdi/js";
     >
       <v-divider></v-divider>
       <v-list density="compact" nav>
-        <v-list-item :prepend-icon="mdiHomeCity" title="Home" to="/" />
-        <v-list-item :prepend-icon="mdiInformation" title="About" to="/about" />
+        <v-list-item
+          v-for="route in appRoutes"
+          :key="route.path"
+          :prepend-icon="route.icon"
+          :title="route.title"
+          :to="route.path"
+        />
       </v-list>
     </v-navigation-drawer>
     <v-main class="h-100">
