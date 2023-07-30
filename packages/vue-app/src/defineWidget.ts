@@ -18,7 +18,7 @@ export const defineWidget = (
       setup() {
         const app = createApp({});
 
-        args.plugins.forEach(app.use);
+        args.plugins.forEach((item) => app.use(item));
 
         const inst = getCurrentInstance();
 
