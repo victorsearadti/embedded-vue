@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
+import Layout from "./components/Layout.vue";
 </script>
 <template>
-  <nav>
-    <div>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </div>
-  </nav>
-  <main>
+  <Layout>
     <RouterView />
-  </main>
+  </Layout>
 </template>

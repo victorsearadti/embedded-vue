@@ -1,23 +1,30 @@
 <script setup lang="ts">
 import HelloWorld from "../components/HelloWorld.vue";
 </script>
-
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="../assets/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <div class="d-flex flex-wrap gap-xl">
+      <a href="https://vitejs.dev" target="_blank">
+        <img src="../assets/vite.svg" class="logo" alt="Vite logo" />
+      </a>
+      <a href="https://vuejs.org/" target="_blank">
+        <img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
+      </a>
+      <a href="" target="_blank">
+        <img
+          src="../assets/vuetify.svg"
+          class="logo vuetify"
+          alt="Vuetify logo"
+        />
+      </a>
+    </div>
+    <HelloWorld msg="Vite + Vue + Vuetify" />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
-
-<style scoped>
+<style>
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 8rem;
+  padding: 1.5em 0;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -26,5 +33,12 @@ import HelloWorld from "../components/HelloWorld.vue";
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+.logo.vuetify:hover {
+  filter: drop-shadow(0 0 2em rgba(70, 149, 239, 0.7));
+}
+
+.gap-xl {
+  gap: 2rem;
 }
 </style>

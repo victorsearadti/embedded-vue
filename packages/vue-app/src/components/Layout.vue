@@ -1,0 +1,24 @@
+<script setup lang="ts">
+import { mdiHomeCity, mdiInformation } from "@mdi/js";
+</script>
+<template>
+  <v-layout>
+    <v-navigation-drawer :rail="true" permanent :absolute="true">
+      <v-list-item title="Embedded Vue" nav>
+        <template v-slot:prepend>
+          <v-avatar color="secondary"> ⚡️ </v-avatar>
+        </template>
+      </v-list-item>
+      <v-divider></v-divider>
+      <v-list density="compact" nav>
+        <v-list-item :prepend-icon="mdiHomeCity" title="Home" to="/" />
+        <v-list-item :prepend-icon="mdiInformation" title="About" to="/about" />
+      </v-list>
+    </v-navigation-drawer>
+    <v-main class="h-100">
+      <div class="pa-8">
+        <slot />
+      </div>
+    </v-main>
+  </v-layout>
+</template>
