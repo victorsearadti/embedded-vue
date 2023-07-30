@@ -12,14 +12,19 @@
     "serve": "pnpm build && pnpm preview"
   },
   "dependencies": {
+    "@vue/shared": "^3.3.4",
+    "html-parsed-element": "^0.4.1",
     "vue": "^3.3.4",
-    "vue-router": "4"
+    "vue-router": "4",
+    "vuetify": "^3.3.10"
   },
   "devDependencies": {
+    "@mdi/js": "^7.2.96",
     "@types/node": "^20.4.5",
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-vuetify": "^1.0.2",
     "vue-tsc": "^1.8.5"
   }
 }
