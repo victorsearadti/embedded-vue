@@ -37,7 +37,7 @@ const count = ref(0);
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .gap-sm {
   gap: 0.75rem;
 }

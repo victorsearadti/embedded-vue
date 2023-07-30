@@ -12,11 +12,6 @@ import { mdiHomeCity, mdiInformation } from "@mdi/js";
       :absolute="true"
       class="bg-vite-black"
     >
-      <v-list-item title="Embedded Vue" nav>
-        <template v-slot:prepend>
-          <v-avatar color="secondary"> ⚡️ </v-avatar>
-        </template>
-      </v-list-item>
       <v-divider></v-divider>
       <v-list density="compact" nav>
         <v-list-item :prepend-icon="mdiHomeCity" title="Home" to="/" />
