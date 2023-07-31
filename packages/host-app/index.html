@@ -23,11 +23,6 @@
     <script type="module" src="http://localhost:4173/widget/index.js"></script>
     <script type="module">
       import { register } from "http://localhost:4173/widget/index.js";
-      setTimeout(() => {
-        /* Wait until vite serve the widget */
-        location.reload();
-      }, 5000);
-
       register();
     </script>
   </body>
