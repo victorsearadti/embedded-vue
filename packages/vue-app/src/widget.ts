@@ -1,5 +1,5 @@
 import App from "./App.vue";
-import { defineWidget } from "./defineWidget";
+import { defineWidget } from "./lib/defineCustomElements";
 import { plugins } from "./plugins";
 
 const AppWidget = defineWidget(App, { plugins });

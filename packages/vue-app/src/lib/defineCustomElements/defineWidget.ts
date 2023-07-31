@@ -1,5 +1,5 @@
 import { Component, Plugin, createApp, getCurrentInstance, h } from "vue";
-import { defineCustomElement } from "./workaround/defineCustomElements";
+import { defineCustomElement } from "./defineCustomElements";
 
 type Args = {
   plugins: Plugin<[]>[];
