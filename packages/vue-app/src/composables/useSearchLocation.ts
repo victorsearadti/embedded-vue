@@ -30,7 +30,7 @@ export function useSearchLocation() {
       (item) => ({
         ...item,
         title: item.name,
-        subtitle: `${stringOrEmpty(item.admin2)}, ${stringOrEmpty(
+        subtitle: `${stringOrEmpty(item.admin2)} ${stringOrEmpty(
           item.admin1
         )} - ${item.country}`,
         avatar: getCountryFlag(item.country_code),
