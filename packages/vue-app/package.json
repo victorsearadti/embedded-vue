@@ -9,7 +9,7 @@
     "build:widget": "vue-tsc && vite build --config vite.config.widget.ts",
     "build": "pnpm build:app && pnpm build:widget",
     "preview": "vite preview",
-    "serve": "pnpm build && pnpm preview"
+    "serve": "pnpm preview"
   },
   "dependencies": {
     "@tanstack/vue-query": "5.0.0-beta.6",
