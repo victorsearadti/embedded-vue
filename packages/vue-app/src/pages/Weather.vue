@@ -99,7 +99,7 @@ watch(
       density="compact"
       label="Search location"
       placeholder="Search a location by name (ex: new york)"
-      variant="solo"
+      variant="outlined"
       v-model:search="searchValue"
       v-model="selected"
       :items="searchResultHistory"
