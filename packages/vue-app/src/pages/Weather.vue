@@ -101,7 +101,6 @@ watch(
       label="Search location"
       placeholder="Search a location by name (ex: new york)"
       variant="solo"
-      bg-color="black"
       v-model:search="searchValue"
       v-model="selected"
       :items="searchResultHistory"

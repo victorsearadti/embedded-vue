@@ -14,7 +14,7 @@ export type WeatherCardProps = {
 defineProps<WeatherCardProps>();
 </script>
 <template>
-  <v-card class="pa-8 bg-black">
+  <v-card class="pa-8">
     <div>
       <v-card-item :title="title" :prepend-avatar="avatar">
         <template v-slot:subtitle>
