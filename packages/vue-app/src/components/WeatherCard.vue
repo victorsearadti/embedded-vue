@@ -23,10 +23,10 @@ defineProps<WeatherCardProps>();
       </v-card-item>
       <v-card-text class="py-0">
         <v-row align="center" no-gutters class="py-1">
-          <v-col class="text-h2" cols="6"> {{ temperature }}&deg;C </v-col>
+          <v-col class="text-h2"> {{ temperature }}&deg;C </v-col>
 
-          <v-col cols="6" class="text-right justify-end">
-            <div class="d-flex flex-column justify-center align-end">
+          <v-col class="justify-center">
+            <div class="d-flex flex-column justify-end align-end">
               <v-icon color="white" :icon="weatherImage" size="4rem"> </v-icon>
               <span class="text-overline">{{ weatherDescription }}</span>
             </div>
