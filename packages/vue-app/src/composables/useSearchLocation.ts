@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/vue-query";
 import { refDebounced } from "@vueuse/core";
 import { computed, ref } from "vue";
 import { LocationResult, geocodingApi } from "../api/geocoding.api";
+import { stringOrEmpty } from "../lib/stringUtils";
 import { queryKeys } from "../plugins/vueQuery";
 
 const getCountryFlag = (countryCode: string) =>
@@ -29,7 +30,9 @@ export function useSearchLocation() {
       (item) => ({
         ...item,
         title: item.name,
-        subtitle: `${item.admin2}, ${item.admin1} - ${item.country}`,
+        subtitle: `${stringOrEmpty(item.admin2)}, ${stringOrEmpty(
+          item.admin1
+        )} - ${item.country}`,
         avatar: getCountryFlag(item.country_code),
         value: `${item.id}-${item.name}`,
       })

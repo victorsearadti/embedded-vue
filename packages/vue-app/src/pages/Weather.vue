@@ -7,6 +7,7 @@ import {
   UseSearchLocationData,
   useSearchLocation,
 } from "../composables/useSearchLocation";
+import { stringOrEmpty } from "../lib/stringUtils";
 
 const selected = ref<UseSearchLocationData | null>(null);
 const { searchValue, searchLocationQuery, searchResultHistory } =
@@ -34,8 +35,6 @@ const isLoading = computed(
     localeCurrentWeatherQuery.isFetching.value ||
     localeCurrentWeatherQuery.isPending.value
 );
-
-const stringOrEmpty = (value = "") => value;
 
 const weatherInfo = computed(() => {
   const temperature = stringOrEmpty(
