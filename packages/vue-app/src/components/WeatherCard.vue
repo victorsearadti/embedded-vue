@@ -26,12 +26,9 @@ defineProps<WeatherCardProps>();
           <v-col class="text-h2" cols="6"> {{ temperature }}&deg;C </v-col>
 
           <v-col cols="6" class="text-right justify-end">
-            <div class="d-flex justify-end">
-              <div class="d-flex flex-column justify-center align-center mr-n6">
-                <v-icon color="white" :icon="weatherImage" size="4rem">
-                </v-icon>
-                <span class="text-overline">{{ weatherDescription }}</span>
-              </div>
+            <div class="d-flex flex-column justify-center align-end">
+              <v-icon color="white" :icon="weatherImage" size="4rem"> </v-icon>
+              <span class="text-overline">{{ weatherDescription }}</span>
             </div>
           </v-col>
         </v-row>
