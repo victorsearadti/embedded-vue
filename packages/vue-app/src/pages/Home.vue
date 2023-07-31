@@ -2,7 +2,7 @@
 import HelloWorld from "../components/HelloWorld.vue";
 </script>
 <template>
-  <div>
+  <div class="d-flex flex-column gap-lg">
     <div class="d-flex flex-wrap gap-xl">
       <a href="https://vitejs.dev" target="_blank">
         <img src="../assets/vite.svg" class="logo" alt="Vite logo" />
@@ -22,9 +22,11 @@ import HelloWorld from "../components/HelloWorld.vue";
   </div>
 </template>
 <style scoped>
+.gap-lg {
+  gap: 1.5rem;
+}
 .logo {
-  height: 8rem;
-  padding: 1.5em 0;
+  height: 6rem;
   will-change: filter;
   transition: filter 300ms;
 }

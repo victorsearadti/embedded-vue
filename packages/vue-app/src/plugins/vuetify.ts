@@ -8,8 +8,7 @@ const vuetify = createVuetify({
     themes: {
       dark: {
         colors: {
-          primary: "#76FF03",
-          secondary: "#FF3D00",
+          primary: "#424242",
           "vite-black": "#242424",
         },
       },

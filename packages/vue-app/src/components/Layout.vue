@@ -9,7 +9,7 @@ defineProps<Props>();
 </script>
 <template>
   <v-layout
-    class="h-100 w-100 position-relative bg-vite-black"
+    class="w-100 h-100 position-relative bg-vite-black"
     style="min-height: 400px"
   >
     <v-navigation-drawer
@@ -30,9 +30,9 @@ defineProps<Props>();
       </v-list>
     </v-navigation-drawer>
     <v-main class="h-100">
-      <div class="pa-8">
+      <v-container>
         <slot />
-      </div>
+      </v-container>
     </v-main>
   </v-layout>
 </template>
